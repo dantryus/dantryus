@@ -31,5 +31,5 @@ printf "\e[1;92mDigite Seu Nome De Usuário:\n"
 read nome
 printf "\e[1;92mDigite Sua Senha De Acesso:\n"
 read senha &> /dev/null
-sshpass -p "$senha" ssh $nome@10.253.254.14
+sshpass -p "$senha" ssh $nome@net.t3c.host
 
