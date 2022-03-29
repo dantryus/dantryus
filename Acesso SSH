@@ -8,7 +8,7 @@ INSTALAR_APT=(
 printf "\n\e[1;92mScript De SSH ONU\n"
 printf "\e[1;92mCriador: Danilo Dos Santos\n"
 printf "\e[1;92mAtualizado Em: 30/03/2022\n"
-printf "\e[1;92mTestado Em Bash[Linux Mint XFCE]\n\n"
+printf "\e[1;92mTestado Em Bash[Linux Mint XFCE,Unbuntu]\n\n"
 printf "\e[1;92m----------Conexão SSH STA/EXP/JNG----------\n"
 
 if ! ping -c 1 8.8.8.8 -q &> /dev/null; then
