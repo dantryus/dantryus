@@ -1,39 +1,86 @@
 #!/usr/bin/env bash
-https://github.com/dantryus/dantryus/blob/main/README.md
+
 #_______________________________________________________________________#
 # ----------------------------- VARIÁVEIS ----------------------------- #
 #_______________________________________________________________________#
 
-PASTA_DOWNLOADS="HOME/$USER/Downloads/programas"
-URL_OPERA="https://download3.operacdn.com/pub/opera/desktop/85.0.4341.18/linux/opera-stable_85.0.4341.18_amd64.deb"
+PASTA_DOWNLOADS="/home/$USER/Downloads/programas"
+INSTALAR_APT=(
+  snapd
+)
+INSTALAR_SNAPS=(
+ libreoffice
+ spotify
+)
+INSTALAR_DEBS=(
+  https://download3.operacdn.com/pub/opera/desktop/85.0.4341.18/linux/opera-stable_85.0.4341.18_amd64.deb
+)
+printf "\n\e[1;92m[INFO] - Iniciando Script De Instalação...\n"
+
 
 
 #_______________________________________________________________________#
 # ----------------------------- REPOSITÓRIOS----------------------------#
 #_______________________________________________________________________#
+printf "\n\e[1;92m[INFO] - Iniciando Configurações...\n"
 
 ## Removendo travas eventuais do apt ##
-sudo rm /var/lib/dpkg/lock-frontend
-sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock-frontend &> /dev/null
+sudo rm /var/cache/apt/archives/lock &> /dev/null
+sudo rm /etc/apt/sources.list.d/spotify.list &> /dev/null
+sudo dpkg --configure -a &> /dev/null
+sudo rm /etc/apt/preferences.d/nosnap.pref &> /dev/null
 ## Atualizando o repositório ##
-sudo apt update -y
+printf "\n\e[1;92m[INFO] - Atualizando Arquivos E Preparando As Instalações...\n"
+sudo apt update -y &> /dev/null;
 
 #repositório spotify
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+printf "\n\e[1;92m[INFO] - Instalando Repositórios\n"
+
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -  &> /dev/null
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list &> /dev/null
 
 #_______________________________________________________________________#
 # ----------------------------- DOWNLOADS-------------------------------#
 #_______________________________________________________________________#
-mkdir $PASTA_DOWNLOADS
-wget "$URL_OPERA" -p $PASTA_DOWNLOADS
-wget "$URL_LIBREOFFICE" -p $PASTA_DOWNLOADS
-sudo dpkg -i $PASTA_DOWNLOADS/*.deb
+
+
+if ! ping -c 1 8.8.8.8 -q &> /dev/null; then
+  printf "\n\e[1;91m[ERRO] - Sem Conexão Com A Internet, Verifique E Tente Novamente\n"
+ exit 1
+else
+  printf "\n\e[1;92m[INFO] - Conexão Com Internet Estabelecida, Prosseguindo...\n"
+fi
+
+ [[ ! -d "$PASTA_DOWNLOADS" ]] && mkdir "$PASTA_DOWNLOADS"
 #tar -xzf "$ARQUIVO_LIBREOFFICE"
 
-sudo apt install snapd
-sudo snap install spotify
-sudo snap install libreoffice
+#INSTALAR PACOTES
+for url in ${INSTALAR_DEBS[@]}; do
+  URL_EXTRAIDA=$(echo ${url##*/} | sed 's/-/_/g' | cut -d _ -f 1)
+  if  ! dpkg -l | grep -iq $URL_EXTRAIDA; then
+  wget -c "$INSTALAR_DEBS"       -P "$PASTA_DOWNLOADS"
+  sudo dpkg -i "$PASTA_DOWNLOADS"/${url##*/} &> /dev/null;
+  printf "\n\e[1;92m[INFO] - O Programa $URL_EXTRAIDA Foi Instalado Corretamente\n"
+else
+  printf "\n\e[1;91m[ERRO] - O Programa $URL_EXTRAIDA Ja Está Instalado\n"
+fi
+done
+for programas in ${INSTALAR_APT[@]}; do
+  if  ! dpkg -l | grep -q $programas; then
+  sudo apt install $programas -y &> /dev/null;
+  printf "\n\e[1;92m[INFO] - O Programa $programas Foi Instalado Corretamente\n"
+else printf "\n\e[1;91m[ERRO] - O Programa $programas Ja Está Instalado\n"
+fi
+done
+for programas2 in ${INSTALAR_SNAPS[@]}; do
+  if  ! snap list | grep -q $programas2; then
+  sudo snap install $programas2 &> /dev/null;
+  printf "\n\e[1;92m[INFO] - O Programa $programas2 Foi Instalado Corretamente\n\n"
+else printf "\n\e[1;91m[ERRO] - O Programa $programas2 Ja Está Instalado\n\n"
+fi
+done
 
 
 #_______________________________________________________________________#
@@ -41,10 +88,14 @@ sudo snap install libreoffice
 #_______________________________________________________________________#
 
 ## Finalização, atualização e limpeza##
-sudo apt update && sudo apt dist-upgrade -y
-flatpak update
-sudo apt autoclean
-sudo apt autoremove -y
+sudo apt update &> /dev/null && sudo apt dist-upgrade -y &> /dev/null;
+#flatpak update
+sudo apt autoclean &> /dev/null
+sudo apt autoremove -y &> /dev/null
 
 
-printf "Finalizado!\n"
+printf "\n\e[1;92mFINALIZADO!\n\n"
+
+printf "\n\e[1;92mScript De Instalação Automática\n"
+printf "\e[1;92mCriador: Danilo Dos Santos\n"
+printf "\e[1;92mAtualizado Em: 29/03/2022\n"
