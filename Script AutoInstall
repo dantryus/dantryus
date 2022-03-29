@@ -14,7 +14,15 @@ INSTALAR_SNAPS=(
 )
 INSTALAR_DEBS=(
   https://download3.operacdn.com/pub/opera/desktop/85.0.4341.18/linux/opera-stable_85.0.4341.18_amd64.deb
+  https://dl.discordapp.net/apps/linux/0.0.17/discord-0.0.17.deb
+  https://atom-installer.github.com/v1.60.0/atom-amd64.deb?s=1646703804&ext=.deb
+  https://download.anydesk.com/linux/anydesk_6.1.1-1_amd64.deb
 )
+printf "\n\e[1;92mScript De Instalação Automática\n"
+printf "\e[1;92mCriador: Danilo Dos Santos\n"
+printf "\e[1;92mAtualizado Em: 29/03/2022\n"
+printf "\e[1;92mTestado Em Bash[Linux Mint XFCE,Unbuntu 20]\n"
+
 printf "\n\e[1;92m[INFO] - Iniciando Script De Instalação...\n"
 
 
@@ -95,7 +103,3 @@ sudo apt autoremove -y &> /dev/null
 
 
 printf "\n\e[1;92mFINALIZADO!\n\n"
-
-printf "\n\e[1;92mScript De Instalação Automática\n"
-printf "\e[1;92mCriador: Danilo Dos Santos\n"
-printf "\e[1;92mAtualizado Em: 29/03/2022\n"
