@@ -6,9 +6,9 @@ INSTALAR_APT=(
 )
 
 printf "\n\e[1;92mScript De SSH ONU\n"
-printf "\e[1;92mCriador: Danilo Dos Santos\n"
-printf "\e[1;92mAtualizado Em: 30/03/2022\n"
-printf "\e[1;92mTestado Em Bash[Linux Mint XFCE,Unbuntu]\n\n"
+printf "\e[1;92mCriador: Danilo Dos Santos[RMA]\n"
+printf "\e[1;92mAtualizado Em: 31/03/2022\n"
+printf "\e[1;92mTestado Em Bash[Linux Mint]\n\n"
 printf "\e[1;92m----------Conexão SSH STA/EXP/JNG----------\n"
 
 if ! ping -c 1 8.8.8.8 -q &> /dev/null; then
@@ -19,10 +19,8 @@ else
 fi
 for programas in ${INSTALAR_APT[@]}; do
   if  ! dpkg -l | grep -q $programas; then
-  printf "\e[1;91m[ERRO] - Necessário O $programas Para Funcionar\n"
-  printf "\e[1;92m[INFO] - Iniciando Instalação, Isso Pode Levar Algums Minutos\n"
+  printf "\e[1;91m[ERRO] - Necessário O $programas Para Funcionar, Iniciando Instalação\n"
   printf "\e[1;92m[INFO] - Insira Sua Senha De Administrador Do Linux\n\n"
-  sudo dpkg --configure -a &> /dev/null
   sudo apt install $programas -y &> /dev/null;
   printf "\e[1;92m[INFO] - O $programas Esta Devidamente Instalado Prosseguindo...\n\n"
 else printf "\e[1;92m[INFO] - O $programas Esta Devidamente Instalado Prosseguindo...\n\n"
@@ -32,5 +30,8 @@ done
 printf "\e[1;92mDigite Seu Nome De Usuário:\n"
 read nome
 printf "\e[1;92mDigite Sua Senha De Acesso:\n"
-read senha &> /dev/null
-sshpass -p "$senha" ssh $nome@net.t3c.host
+stty -echo
+read senha 
+stty echo
+clear
+sshpass -p "$senha" ssh $nome@10.253.254.14
