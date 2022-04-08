@@ -4,6 +4,8 @@
 # ----------------------------- VARIÁVEIS ----------------------------- #
 #_______________________________________________________________________#
 
+##https://drive.google.com/drive/folders/1uTTJg4AVwNgHPQr2MOOMMSQZcDzaSrLG?usp=sharing
+
 PASTA_DOWNLOADS="/home/$USER/Downloads/programas"
 INSTALAR_APT=(
   snapd
