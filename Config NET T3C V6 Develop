@@ -1,20 +1,32 @@
 {
-  "Version": "1.0.2",
-  "ReleaseNotes": "\e[1;92mMensagem Teste \n Codigo Registro 01 \n Versão Alfa \n 06/06/2022",
+  "Version": "1.0.3",
+  "ReleaseNotes": "Mensagem Teste \n Codigo Registro 01 \n Versão Alfa \n 06/06/2022",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20Develop",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20Develops",
   "EmailFeedback": "suporte@nett3c.com.br",
   "UrlContato": "https://wa.me/+55799690-7433",
   "UrlTermos": "",
   "CheckUser": "true",
-  "UdpPort": "7100;7200;7295;7296;7300;7297;7298;7299;7400",
+  "UdpPort": "7100;7300;7400",
   "Servers": [
     {
       "Name": "SERVIDOR BR-R01",
       "TYPE": "premium",
       "FLAG": "br.png",
       "ServerIP": "net.t3c.host",
-      "CheckUser": "http://209.14.136.36:5454/checkUser",
+      "CheckUser": "http://home.t3c.host:80/checkUser",
+      "ServerPort": "22",
+      "SSLPort": "443",
+      "USER": "",
+      "PASS": ""
+    }
+  "Servers": [
+    {
+      "Name": "SERVIDOR Teste",
+      "TYPE": "premium",
+      "FLAG": "br.png",
+      "ServerIP": "net.t3c.host",
+      "CheckUser": "http://home.t3c.host:80/checkUser",
       "ServerPort": "22",
       "SSLPort": "443",
       "USER": "",
@@ -29,7 +41,7 @@
       "SNI": "",
       "TlsIP": "",
       "ProxyIP": "104.18.7.80",
-      "ProxyPort": "80",
+      "ProxyPort": "8080",
       "Info": "Proxy"
     }
   ]
