@@ -23,7 +23,7 @@
   ],
   "Networks": [
      {
-      "Name": "🟪VIVO [WS1]",
+      "Name": "VIVO [WS1]",
       "FLAG": "vivo",
       "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
       "SNI": "",
