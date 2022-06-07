@@ -10,18 +10,6 @@
   "UdpPort": "7100;7300;7400",
   "Servers": [
     {
-      "Name": "SERVIDOR BR-R01",
-      "TYPE": "premium",
-      "FLAG": "br.png",
-      "ServerIP": "home.t3c.host",
-      "CheckUser": "http://home.t3c.host:80/checkUser",
-      "ServerPort": "22",
-      "SSLPort": "443",
-      "USER": "",
-      "PASS": ""
-    },
-  "Servers": [
-    {
       "Name": "SERVIDOR Teste",
       "TYPE": "premium",
       "FLAG": "br.png",
