@@ -1,6 +1,6 @@
 {
-  "Version": "1.0.1",
-  "ReleaseNotes": "Mensagem Teste \n Codigo Registro 01 \n Versão Alfa \n 06/06/2022",
+  "Version": "1.0.2",
+  "ReleaseNotes": "\e[1;92mMensagem Teste \n Codigo Registro 01 \n Versão Alfa \n 06/06/2022",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20Develop",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20Develops",
   "EmailFeedback": "suporte@nett3c.com.br",
