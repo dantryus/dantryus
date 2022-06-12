@@ -1,13 +1,13 @@
 {
   "Version": "1.0.0",
   "ReleaseNotes": "Nova Atualização Do Aplicativo Net T3C VPN",
-  "UrlUpdate": "https://pt.textbin.net/raw/piqlszjchj",
-  "Sms": "https://pt.textbin.net/raw/6iv15cibrg",
+  "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Net%20T3C%20VPN%20V6%20Config",
+  "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/Net%20T3C%20VPN%20V6%20SMS%20Token",
   "EmailFeedback": "suporte@nett3c.com.br",
   "UrlContato": "https://wa.me/+557996907433",
   "UrlTermos": "",
-  "CheckUser": "true",
-  "UdpPort": "7100;7200;7295;7296;7300;7297;7298;7299;7400",
+  "CheckUser": "false",
+  "UdpPort": "7100;7200;7300;7400",
   "Servers": [
     {
       "Name": "SERVIDOR BR-R01",
