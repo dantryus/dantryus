@@ -1,6 +1,6 @@
 {
-  "Version": "1.0.0",
-  "ReleaseNotes": "Net T3C VPN V6 \n\n  Servidor BR-R01 \n\n Versão Administrativa",
+  "Version": "1.0.1",
+  "ReleaseNotes": "Net T3C VPN V6 \n\n  Servidor BR-R01 \n Versão Administrativa \n\n Correção Do Bug De Conexão",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20-%20ADM",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20ADM",
   "EmailFeedback": "suporte@nett3c.com.br",
@@ -28,7 +28,7 @@
       "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
       "SNI": "",
       "TlsIP": "",
-      "ProxyIP": "104.18.7.80",
+      "ProxyIP": "104.24.10.16",
       "ProxyPort": "8080",
       "Info": "Proxy"
     }
