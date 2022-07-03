@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.0",
+  "Version": "1.0.4",
   "ReleaseNotes": "Net T3C VPN V6 \n\n  Servidor BR-R01 \n Versão Administrativa \n\n Erro De Conexão Solucionado",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20-%20ADM",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20ADM",
@@ -13,7 +13,7 @@
       "Name": "SERVIDOR BR-R01",
       "TYPE": "premium",
       "FLAG": "br.png",
-      "ServerIP": "net.t3c.host",
+      "ServerIP": "avira.nett3c.com.br",
       "CheckUser": "http://209.14.136.36:5454/checkUser",
       "ServerPort": "22",
       "SSLPort": "443",
@@ -25,10 +25,10 @@
      {
       "Name": "VIVO [WS1]",
       "FLAG": "vivo",
-      "Payload": "GET wss://vivo360.vivo.com.br/ HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
+      "Payload": "UNLOCK / HTTP/1.1[lf]Host: avira.nett3c.com.br[crlf]Upgrade: websocket[crlf][crlf]",
       "SNI": "",
       "TlsIP": "",
-      "ProxyIP": "104.18.6.80",
+      "ProxyIP": "104.24.25.34",
       "ProxyPort": "8080",
       "Info": "Proxy"
     }
