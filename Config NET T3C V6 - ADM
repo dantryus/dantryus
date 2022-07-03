@@ -1,12 +1,12 @@
 {
-  "Version": "1.0.2",
+  "Version": "1.0.3",
   "ReleaseNotes": "Net T3C VPN V6 \n\n  Servidor BR-R01 \n Versão Administrativa \n\n Erro De Conexão Solucionado",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20-%20ADM",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20ADM",
   "EmailFeedback": "suporte@nett3c.com.br",
   "UrlContato": "https://wa.me/+557996907433",
   "UrlTermos": "",
-  "CheckUser": "false",
+  "CheckUser": "False",
   "UdpPort": "7100;7200;7300;7400",
   "Servers": [
     {
