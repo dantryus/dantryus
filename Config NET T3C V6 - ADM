@@ -28,7 +28,7 @@
       "GET wss://vivo360.vivo.com.br/ HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
       "SNI": "",
       "TlsIP": "",
-      "ProxyIP": "104.24.10.16",
+      "ProxyIP": "104.18.6.80",
       "ProxyPort": "8080",
       "Info": "Proxy"
     }
