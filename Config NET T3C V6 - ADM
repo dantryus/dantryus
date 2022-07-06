@@ -6,7 +6,7 @@
   "EmailFeedback": "suporte@nett3c.com.br",
   "UrlContato": "https://wa.me/+557996907433",
   "UrlTermos": "",
-  "CheckUser": "False",
+  "CheckUser": "true",
   "UdpPort": "7100;7200;7300;7400",
   "Servers": [
     {
@@ -36,7 +36,7 @@
       "Name": "VIVO WS 02",
       "FLAG": "vivo",
       "Payload": "UNLOCK wss://alura.com.br HTTP/1.1[crlf]Host:[app_host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
-      "SNI": "vivo360.vivo.com.br",
+      "SNI": "",
       "TlsIP": "104.18.7.80",
       "ProxyIP": "",
       "ProxyPort": "8080",
