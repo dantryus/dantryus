@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.4",
+  "Version": "1.0.5",
   "ReleaseNotes": "Net T3C VPN V6 \n\n  Servidor BR-R01 \n Versão Administrativa \n\n Erro De Conexão Solucionado",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20-%20ADM",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20ADM",
@@ -13,8 +13,8 @@
       "Name": "SERVIDOR BR-R01",
       "TYPE": "premium",
       "FLAG": "br.png",
-      "ServerIP": "avira.nett3c.com.br",
-      "CheckUser": "http://209.14.136.36:5454/checkUser",
+      "ServerIP": "net.t3c.host",
+      "CheckUser": "http://2804:5364:3200:3:3:3:8c41:2efc:5454/checkUser",
       "ServerPort": "22",
       "SSLPort": "443",
       "USER": "",
@@ -22,15 +22,35 @@
     }
   ],
   "Networks": [
-     {
-      "Name": "VIVO [WS1]",
+    {
+      "Name": "VIVO WS 01",
       "FLAG": "vivo",
-      "Payload": "UNLOCK / HTTP/1.1[lf]Host: avira.nett3c.com.br[crlf]Upgrade: websocket[crlf][crlf]",
-      "SNI": "",
-      "TlsIP": "",
-      "ProxyIP": "104.24.25.34",
+      "Payload": "UNLOCK wss://alura.com.br HTTP/1.1[crlf]Host:[app_host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
+      "SNI": "vivo360.vivo.com.br",
+      "TlsIP": "104.18.6.80",
+      "ProxyIP": "",
       "ProxyPort": "8080",
-      "Info": "Proxy"
+      "Info": "Tlsws"
+    },
+    {
+      "Name": "VIVO WS 02",
+      "FLAG": "vivo",
+      "Payload": "UNLOCK wss://alura.com.br HTTP/1.1[crlf]Host:[app_host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
+      "SNI": "vivo360.vivo.com.br",
+      "TlsIP": "104.18.7.80",
+      "ProxyIP": "",
+      "ProxyPort": "8080",
+      "Info": "Tlsws"
+    },
+    {
+      "Name": "VIVO WS 03",
+      "FLAG": "vivo",
+      "Payload": "UNLOCK wss://alura.com.br HTTP/1.1[crlf]Host:[app_host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
+      "SNI": "vigia.vivo.com.br",
+      "TlsIP": "104.21.11.51",
+      "ProxyIP": "",
+      "ProxyPort": "8080",
+      "Info": "Tlsws"
     }
   ]
 }
