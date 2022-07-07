@@ -1,13 +1,13 @@
 {
-  "Version": "1.0.8",
-  "ReleaseNotes": "Net T3C VPN V6 \n\n  Servidor BR-R01 \n Versão Administrativa \n\n Erro De Conexão Solucionado \n 07/07/2022",
-  "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20-%20ADM",
-  "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20ADM",
+  "Version": "1.0.9",
+  "ReleaseNotes": "NET T3C VPN \n\n Nova Atualização \n Correção do Erro De Conexão \n Atualização 1.0.9 \n 07/07/2022",
+  "UrlUpdate": "https://pt.textbin.net/raw/piqlszjchj",
+  "Sms": "https://pt.textbin.net/raw/6iv15cibrg",
   "EmailFeedback": "suporte@nett3c.com.br",
-  "UrlContato": "https://wa.me/+557996907433",
+  "UrlContato": "https://wa.me/+55799690-7433",
   "UrlTermos": "",
-  "CheckUser": "false",
-  "UdpPort": "7100;7200;7300;7400",
+  "CheckUser": "true",
+  "UdpPort": "7100;7200;7295;7296;7300;7297;7298;7299;7400",
   "Servers": [
     {
       "Name": "SERVIDOR BR-R01",
@@ -22,35 +22,15 @@
     }
   ],
   "Networks": [
-    {
-      "Name": "VIVO WS 01",
+     {
+      "Name": "🟪VIVO [WS1]",
       "FLAG": "vivo",
       "Payload": "GET wss://alura.com.br HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
       "SNI": "",
-      "TlsIP": "104.18.6.80",
-      "ProxyIP": "",
+      "TlsIP": "",
+      "ProxyIP": "104.18.6.80",
       "ProxyPort": "8080",
-      "Info": "Tlsws"
-    },
-    {
-      "Name": "VIVO WS 02 (TESTE)",
-      "FLAG": "vivo",
-      "Payload": "GET wss://alura.com.br HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
-      "SNI": "",
-      "TlsIP": "104.18.7.80",
-      "ProxyIP": "",
-      "ProxyPort": "8080",
-      "Info": "Tlsws"
-    },
-    {
-      "Name": "VIVO WS 03 (TESTE)",
-      "FLAG": "vivo",
-      "Payload": "GET wss://alura.com.br HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
-      "SNI": "vigia.vivo.com.br",
-      "TlsIP": "104.21.11.51",
-      "ProxyIP": "",
-      "ProxyPort": "8080",
-      "Info": "Tlsws"
+      "Info": "Proxy"
     }
   ]
 }
