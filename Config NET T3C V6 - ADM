@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.7",
+  "Version": "1.0.8",
   "ReleaseNotes": "Net T3C VPN V6 \n\n  Servidor BR-R01 \n Versão Administrativa \n\n Erro De Conexão Solucionado",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Config%20NET%20T3C%20V6%20-%20ADM",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/SMS%20Token%20Net%20T3C%20V6%20ADM",
@@ -25,7 +25,7 @@
     {
       "Name": "VIVO WS 01",
       "FLAG": "vivo",
-      "Payload": "UNLOCK wss://alura.com.br HTTP/1.1[crlf]Host:net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
+      "Payload": "GET wss://alura.com.br HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
       "SNI": "",
       "TlsIP": "104.18.6.80",
       "ProxyIP": "",
@@ -33,9 +33,9 @@
       "Info": "Tlsws"
     },
     {
-      "Name": "VIVO WS 02",
+      "Name": "VIVO WS 02 (TESTE)",
       "FLAG": "vivo",
-      "Payload": "UNLOCK wss://alura.com.br HTTP/1.1[crlf]Host:[app_host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
+      "Payload": "GET wss://alura.com.br HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
       "SNI": "",
       "TlsIP": "104.18.7.80",
       "ProxyIP": "",
@@ -43,9 +43,9 @@
       "Info": "Tlsws"
     },
     {
-      "Name": "VIVO WS 03",
+      "Name": "VIVO WS 03 (TESTE)",
       "FLAG": "vivo",
-      "Payload": "UNLOCK wss://alura.com.br HTTP/1.1[crlf]Host:[app_host][crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
+      "Payload": "GET wss://alura.com.br HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
       "SNI": "vigia.vivo.com.br",
       "TlsIP": "104.21.11.51",
       "ProxyIP": "",
