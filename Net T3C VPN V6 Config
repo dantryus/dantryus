@@ -1,12 +1,12 @@
 {
-  "Version": "1.0.1",
-  "ReleaseNotes": "Net T3C VPN \n Nova Atualização \n\n Corrigindo Bug De Conexão",
+  "Version": "1.0.2",
+  "ReleaseNotes": "NET T3C VPN \n Nova Atualização! \n\n *Correção Bug De Conexão \n Atualização V1.0.2 \n 07/07/2022",
   "UrlUpdate": "https://raw.githubusercontent.com/dantryus/dantryus/main/Net%20T3C%20VPN%20V6%20Config",
   "Sms": "https://raw.githubusercontent.com/dantryus/dantryus/main/Net%20T3C%20VPN%20V6%20SMS%20Token",
   "EmailFeedback": "suporte@nett3c.com.br",
   "UrlContato": "https://wa.me/+557996907433",
   "UrlTermos": "",
-  "CheckUser": "false",
+  "CheckUser": "true",
   "UdpPort": "7100;7200;7300;7400",
   "Servers": [
     {
@@ -14,7 +14,7 @@
       "TYPE": "premium",
       "FLAG": "br.png",
       "ServerIP": "net.t3c.host",
-      "CheckUser": "http://209.14.136.36:5454/checkUser",
+      "CheckUser": "http://2804:5364:3200:3:3:3:8c41:2efc:5454/checkUser",
       "ServerPort": "22",
       "SSLPort": "443",
       "USER": "",
@@ -23,12 +23,12 @@
   ],
   "Networks": [
      {
-      "Name": "VIVO [WS1]",
+      "Name": "🟪VIVO [WS1]",
       "FLAG": "vivo",
-      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
+      "Payload": "GET wss://alura.com.br HTTP/1.1[crlf]Host: net.t3c.host[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf]Connection: Keep-Alive[lf][lf]",
       "SNI": "",
       "TlsIP": "",
-      "ProxyIP": "104.24.10.16",
+      "ProxyIP": "104.18.6.80",
       "ProxyPort": "8080",
       "Info": "Proxy"
     }
