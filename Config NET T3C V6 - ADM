@@ -6,7 +6,7 @@
   "EmailFeedback": "suporte@nett3c.com.br",
   "UrlContato": "https://wa.me/+557996907433",
   "UrlTermos": "",
-  "CheckUser": "true",
+  "CheckUser": "false",
   "UdpPort": "7100;7200;7300;7400",
   "Servers": [
     {
