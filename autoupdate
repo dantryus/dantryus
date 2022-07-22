@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+printf "\n\e[1;92m--------------------------------------------------------------------------------\n\n"
+printf "\e[1;92mScprit De Autoupdate\n"
+printf "\e[1;92mCriador: Danilo Dos Santos[RMA]\n"
+printf "\e[1;92mAtualizado Em: 21/07/2022\n"
+printf "\e[1;92mTestado Em Bash[Linux Mint]\n"
+printf "\n\e[1;92m--------------------------------------------------------------------------------\n"
+
+printf 'O sistema esta em atualização, aguarde!...\n\n'
+
+
+sudo apt update  &> /dev/null;
+clear 
+printf "\n\e[1;92m--------------------------------------------------------------------------------\n\n"
+printf "\e[1;92mScprit De Autoupdate\n"
+printf "\e[1;92mCriador: Danilo Dos Santos[RMA]\n"
+printf "\e[1;92mAtualizado Em: 21/07/2022\n"
+printf "\e[1;92mTestado Em Bash[Linux Mint]\n"
+printf "\n\e[1;92m--------------------------------------------------------------------------------\n"
+
+printf 'O sistema esta em atualização, aguarde!...\n\n'
+sudo apt upgrade -y  &> /dev/null;
+sudo apt-get update  &> /dev/null;
+sudo apt-get upgrade -y  &> /dev/null;
+sudo apt-get dist-upgrade  -y  &> /dev/null;
+sudo dpkg --configure -a  &> /dev/null;
+sudo apt autoclean  &> /dev/null;
+sudo apt autoremove -y  &> /dev/null;
+printf '\n\n__________Finalizado!_______'
+read
